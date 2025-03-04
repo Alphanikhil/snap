@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 .catch((err) => console.error("❌ MongoDB Connection Error:", err));
 
 // Load User Model
-const User = require("./models/User");
+const User = require("./User");
 
 // Routes
 app.post("/login", async (req, res) => {
