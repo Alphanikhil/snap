@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const path = require("path");  // ADD THIS LINE
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -20,7 +21,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 .catch((err) => console.error("❌ MongoDB Connection Error:", err));
 
 // Load User Model
-const User = require("./User");
+const User = require("/User");
 
 // Routes
 app.post("/login", async (req, res) => {
