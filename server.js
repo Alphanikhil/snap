@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 .catch((err) => console.error("❌ MongoDB Connection Error:", err));
 
 // Load User Model
-const User = require("./js/User");
+ 
 app.use(express.static(__dirname)); // ✅ This serves all static files correctly
 
 // Routes
