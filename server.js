@@ -23,6 +23,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 // Load User Model
 const User = require("./js/User");
+app.use(express.static(__dirname)); // ✅ This serves all static files correctly
 
 // Routes
 app.post("/login", async (req, res) => {
